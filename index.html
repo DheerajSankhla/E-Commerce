@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="navbar">
+
+  <!-- navbar -->
+  <nav class="navbar navbar-expand-lg bg-white sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="#"><img src="assets/logo.svg" alt=""></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto ">
+          <li class="nav-item">
+            <a class="nav-link mx-3 " aria-current="page" href="#hero">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link mx-3 " aria-current="page" href="#shop">Shops</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link mx-3 " aria-current="page" href="#blog">BLogs</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link mx-3 " aria-current="page" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link mx-3 " aria-current="page" href="#contact">Contact</a>
+          </li>
+
+
+
+
+        </ul>
+        <div class="addbox">
+          <a href="#" class="btn btn-brand ms-lg-3" onclick="toggleCart()"><i
+              class="fa-solid fa-cart-shopping fs-4 "></i></a>
+          <span class="item-count hidden" id="itemCount">0</span>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- hero section -->
+
+  <section id="hero" class="d-flex align-items-center text-center justify-content-center">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 herotitle">
+          <p class="text-uppercase mt-3  fs-3   mb-0  text-lg-white">Mens collection 2024</p>
+          <h1 class="text-uppercase display-1 fw-semibold mb-4"> <span id="textt"></span></h1>
+          <a href="#" class="btn btn-brand">Shop Now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- shop section -->
+  <section id="shop" class="section-padding">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center">
+          <div class="section-title">
+            <h1>Shop <span>Now</span></h1>
+            <div class="line"></div>
+            <p> Discover the best deals on a wide range of products, from fashion to electronics. Shop now and enjoy
+              exclusive offers tailored just for you!</p>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="row justify-content-center">
+        <div class="col-12 row">
+          <div class="button-filters col-lg-8 col-md-12 mb-3 mb-lg-0 text-center text-lg-start">
+            <button class="btn btn-brand mx-lg-2 my-2 my-lg-0 mx-1" onclick="filterCards('all')">All</button>
+            <button class="btn btn-brand mx-lg-2 my-2 my-lg-0 mx-1" onclick="filterCards('men')">Mens</button>
+            <button class="btn btn-brand mx-lg-2 my-2 my-lg-0 mx-1" onclick="filterCards('women')">Womens</button>
+            <button class="btn btn-brand mx-lg-2 my-2 my-lg-0 mx-1" onclick="filterCards('children')">Children</button>
+          </div>
+          <div class="form col-lg-4 mt-lg-0 mt-3 ">
+            <form action="#">
+              <input type="text" class="form-control" placeholder="Search...." id="searchInput">
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class=" col-lg-3 col-md-4 col-sm-6 mt-5 cardbox women">
+          <div class="image">
+            <img src="assets/w1.webp" alt="">
+            <button class="btn btn-brand" id="addtocart"
+              onclick="addtocart('Espirle Ruffle Shirt',16.64,'assets/w1.webp')">Add To Cart</button>
+
+          </div>
+          <div class="title d-flex justify-content-between mt-3">
+            <h5>Espirle Ruffle Shirt</h5>
+            <h5><i class="fa-regular fa-heart"></i></h5>
+          </div>
+          <h4>$16.64</h4>
+        </div>
+
+        <div class=" col-lg-3 col-md-4 col-sm-6 mt-5 cardbox children">
+          <div class="image">
+            <img src="assets/c1.jpeg" alt="">
+            <button class="btn btn-brand" id="addtocart"
+              onclick="addtocart('Espirle Ruffle Shirt',17.64,'assets/c1.jpeg')">Add To Cart</button>
+
+          </div>
+          <div class="title d-flex justify-content-between mt-3">
+            <h5>Espirle Ruffle Shirt</h5>
+            <h5><i class="fa-regular fa-heart"></i></h5>
+          </div>
+          <h4>$17.64</h4>
+        </div>
+
+        <div class=" col-lg-3 col-md-4 col-sm-6 mt-5 cardbox men">
+          <div class="image">
+            <img src="assets/m1.webp" alt="">
+            <button class="btn btn-brand" id="addtocart"
+              onclick="addtocart('Espirle Ruffle Shirt',18.74,'assets/m1.webp')">Add To Cart</button>
+          </div>
+          <div class="title d-flex justify-content-between mt-3">
+            <h5>Espirle Ruffle Shirt</h5>
+            <h5><i class="fa-regular fa-heart"></i></h5>
+          </div>
+          <h4>$18.74</h4>
+        </div>
+
+        <div class=" col-lg-3 col-md-4 col-sm-6 mt-5 cardbox women">
+          <div class="image">
+            <img src="assets/w2.webp" alt="">
+            <button class="btn btn-brand" id="addtocart"
+              onclick="addtocart('Espirle Ruffle Shirt',28.74,'assets/w2.webp')">Add To Cart</button>
+
+          </div>
+          <div class="title d-flex justify-content-between mt-3">
+            <h5>Espirle Ruffle Shirt</h5>
+            <h5><i class="fa-regular fa-heart"></i></h5>
+          </div>
+          <h4>$20.64</h4>
+        </div>
+
+        <div class=" col-lg-3 col-md-4 col-sm-6 mt-5 cardbox children">
+          <div class="image">
+            <img src="assets/c2.jpeg" alt="">
+            <button class="btn btn-brand" id="addtocart"
+              onclick="addtocart('Espirle Ruffle Shirt',18.74,'assets/c2.jpeg')">Add To Cart</button>
+
+          </div>
+          <div class="title d-flex justify-content-between mt-3">
+            <h5>Espirle Ruffle Shirt</h5>
+            <h5><i class="fa-regular fa-heart"></i></h5>
+          </div>
+          <h4>$16.64</h4>
+        </div>
+
+        <div class=" col-lg-3 col-md-4 col-sm-6 mt-5 cardbox men">
+          <div class="image">
+            <img src="assets/m2.webp" alt="">
+            <button class="btn btn-brand" id="addtocart"
+              onclick="addtocart('Espirle Ruffle Shirt',18.74,'assets/m2.webp')">Add To Cart</button>
+
+          </div>
+          <div class="title d-flex justify-content-between mt-3">
+            <h5>Espirle Ruffle Shirt</h5>
+            <h5><i class="fa-regular fa-heart"></i></h5>
+          </div>
+          <h4>$16.64</h4>
+        </div>
+
+        <div class=" col-lg-3 col-md-4 col-sm-6 mt-5 cardbox children">
+          <div class="image">
+            <img src="assets/c3.jpeg" alt="">
+            <button class="btn btn-brand" id="addtocart"
+              onclick="addtocart('Espirle Ruffle Shirt',18.74,'assets/c3.jpeg')">Add To Cart</button>
+
+          </div>
+          <div class="title d-flex justify-content-between mt-3">
+            <h5>Espirle Ruffle Shirt</h5>
+            <h5><i class="fa-regular fa-heart"></i></h5>
+          </div>
+          <h4>$16.64</h4>
+        </div>
+
+        <div class=" col-lg-3 col-md-4 col-sm-6 mt-5 cardbox men">
+          <div class="image">
+            <img src="assets/m4.jpeg" alt="">
+            <button class="btn btn-brand" id="addtocart"
+              onclick="addtocart('Espirle Ruffle Shirt',18.74,'assets/m4.jpeg')">Add To Cart</button>
+          </div>
+          <div class="title d-flex justify-content-between mt-3">
+            <h5>Espirle Ruffle Shirt</h5>
+            <h5><i class="fa-regular fa-heart"></i></h5>
+          </div>
+          <h4>$16.64</h4>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- add to cart  -->
+
+  <div class="cart" id="cart" style="z-index: 1000;">
+    <div class="cart-header">
+      <h3>Your Cart</h3>
+      <button onclick="toggleCart()" id="btn-close"> <i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <div class="cart-items" id="cartItems">
+      <!-- automatically create a card js  -->
+
+    </div>
+    <div class="cart-footer">
+      <h4>Total: $<span id="totalAmount">0.00</span></h4>
+    </div>
+  </div>
+
+
+  <!-- blog Section  -->
+  <section id="blog" class="bg-light section-padding">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center">
+          <div class="section-title">
+            <h1>Our Latest <span>Blog</span></h1>
+            <div class="line"></div>
+            <p>Discover the latest trends, tips, and news in the world of fashion and e-commerce.</p>
+          </div>
+
+        </div>
+      </div>
+      <div class="row section-padding">
+        <div
+          class="col-12 container overflow-hidden  d-flex flex-column align-items-center text-center justify-content-center">
+          <div class="image-container ">
+            <span style="--i:1">
+              <img src="assets/saleblog.jpeg" alt="">
+            </span>
+            <span style="--i:2">
+              <img src="assets/blog2.jpeg" alt="">
+            </span>
+            <span style="--i:3">
+              <img src="assets/blog3.jpeg" alt="">
+            </span>
+            <span style="--i:4">
+              <img src="assets/blog4.jpeg" alt="">
+            </span>
+            <span style="--i:5">
+              <img src="assets/blog5.jpeg" alt="">
+            </span>
+            <span style="--i:6">
+              <img src="assets/blog6.jpeg" alt="">
+            </span>
+            <span style="--i:7">
+              <img src="assets/blog7.jpeg" alt="">
+            </span>
+            <span style="--i:8">
+              <img src="assets/blog8.jpeg" alt="">
+            </span>
+          </div>
+          <div class="btn-container mt-5">
+            <button class="btn btn-brand" id="prev"><span><i class="fa-solid fa-arrow-left"></i></span> prev</button>
+            <button class="btn btn-brand" id="next">next <span><i class="fa-solid fa-arrow-right"></i></span> </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- about section -->
+  <section id="about" class="section-padding">
+    <div class="container">
+        <div class="row">
+          <div class="col-12 text-center">
+            <div class="section-title">
+              <h1>About <span>US</span></h1>
+              <div class="line"></div>
+              <p>"At <span class="fw-semibold">Productly</span>, we are dedicated to bringing you thoughtfully curated products with an exceptional shopping experience that inspires and delights."</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="row mt-3">
+          <div class="col-lg-6 ">
+              <div class="image  aboutimg">
+                <img src="assets/about.jpeg" alt="">
+               <div class="about-btn">
+               <a href="#shop"> <button class="btn btn-brand about"> Shop Now </button></a>
+               </div>
+              </div>
+          </div>
+          <div class="col-lg-6 d-flex justify-content-center align-items-center  mt-lg-0 mt-4 bg-light ">
+               <div class="section-title d-flex flex-column justify-content-center align-items-center">
+                 <div><h1>SALE!!!</h1></div>
+                 <div class="countdown d-flex flex-row gap-md-5 gap-3 mt-4">
+                  <div class="count">
+                    <span id="hours">9</span>
+                    <span>Hours</span>
+                  </div>
+                  <div class="count">
+                    <span id="minutes">54</span>
+                    <span>Minutes</span>
+                  </div>
+                  <div class="count">
+                    <span id="second">00</span>
+                    <span>Seconds</span>
+                  </div> 
+                 
+                 </div>
+               </div> 
+          </div>
+        </div>
+    </div>
+  </section>
+
+ <!--contact section  -->
+ <section id="contact" class="section-padding">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 text-center">
+        <div class="section-title">
+          <h1>Contact <span>US</span></h1>
+          <div class="line"></div>
+           
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-6 bg-light justify-content-center mt-4 form-container">
+        <h1 class="text-center formheading">Join Us</h1>
+        <form action="#" class="row mt-3">
+        <div class="form-group mt-3 col-lg-6 d-flex flex-column gap-2">
+         <label for="fname" class="px-3">First name *</label>
+         <input type="text" class="form-control" id="fname" >
+        </div>
+        <div class="form-group mt-3 col-lg-6 d-flex flex-column gap-2">
+         <label for="lname" class="px-3">Last name</label>
+         <input type="text" class="form-control" id="lname">
+        </div>
+        <div class="form-group mt-3 col d-flex flex-column gap-2">
+         <label for="mail" class="px-3">E-mail</label>
+         <input type="email " class="form-control" id="mail">
+        </div>
+        <div class=" form-group mt-3 col-lg-12">
+         <textarea name="message" id="" row="9" class="form-control" placeholder="Enter MEssage"></textarea>
+       </div>
+       <div class=" form-group mt-3 col-lg-12">
+         <button class="btn btn-brand form-control">Submit</button>
+       </div>
+        </form>
+     </div>
+     <div class="col-lg-6">
+          <img src="assets/map.jpeg" alt="" class="imagee">
+     </div>
+    </div>
+  </div>
+ </section>
+
+<!-- footer -->
+
+
+<footer class="bg-light">
+  <div class="container">
+      <div class="row">
+        <div class="col d-flex justify-content-between  align-items-center pt-3 row footercontainer">
+          <div class="footer1 col-auto">
+            <img src="assets/logo.svg" alt="">
+          </div>
+          <div class="footer2 section-title col-auto">
+              <h5> © 2024 Copyright: <span>Dheeraj Sankhla</span></h5>
+          </div>
+          <div class="footer3 col-auto">
+           <a href="https://x.com/home" target="_blank"><span><i class="fa-brands fa-x-twitter"></i></span></a>
+           <a href="https://www.linkedin.com/in/dheeraj-sankhla-1845b22aa/?originalSubdomain=in" target="_blank"><span><i class="fa-brands fa-linkedin"></i></span></a>
+           <a href="https://github.com/DheerajSankhla" target="_blank"><span><i class="fa-brands fa-github"></i></span></a>
+          </div>
+        </div>
+      </div>
+  </div>
+</footer>
+  <!-- icons -->
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <!-- end -->
+  <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+
+    <!-- type js -->
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+</body>
+
+</html>
